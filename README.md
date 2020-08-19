@@ -1,4 +1,10 @@
-# CompareMyself
+# CompareYourself
+
+Simple app to compare your details to others, using AngularJS and a serverless backend with AWS Lambda, API Gateway, Cognito and DynamoDB.
+
+Hosted example here:
+
+# Angular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
 
