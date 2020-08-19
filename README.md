@@ -4,31 +4,41 @@ Simple app to compare your details to others, using AngularJS and a serverless b
 
 Hosted example here:
 
-# Angular
+# Features
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
+Auth:
 
-## Development server
+- Sign up -> receive email confirmation from AWS Cognito
+- Confirm email
+- Sign in
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Details:
 
-## Code scaffolding
+- Add your personal details -> saved in DynamoDB
+- Retrieve your personal details
+- Compare your personal details with all others
+- Delete your personal details
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
+# Install
 
-## Build
+Install Dependencies:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+    node install
 
-## Running unit tests
+# Setup
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+TODO: include Lambda code, Cognito setup instructions, API Gateway setup instructions
 
-## Running end-to-end tests
+Create environment variables:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+- Add an environments folder in src/
+- Add a environment.ts file
+- Example file:
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+          export const environment = {
+            production: false,
+            userPoolId: "YOUR_COGNITO_USER_POOL_ID",
+            clientId: "YOUR_COGNITO_CLIENT_ID",
+            apiUrl:
+            "YOUR_API_GATEWAY_BASE_URL",
+          };
