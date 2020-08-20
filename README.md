@@ -46,3 +46,7 @@ Create environment variables:
             apiUrl:
             "YOUR_API_GATEWAY_BASE_URL",
           };
+
+# Run
+
+    npm start
